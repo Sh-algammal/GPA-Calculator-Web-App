@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <meta name="author" content="omar lokma"/>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GPA Calculator</h1>
+        <div id="course-container">
+            <div class="course">
+                <input type="text" class="course-name" placeholder="Course Name" required>
+                <input type="number" class="grade" placeholder="GPA (0.00 - 4.00)" min="0" max="4" step="0.001" required>
+                <input type="number" class="credits" placeholder="Credits" min="0" required>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="add-course">Add Course</button>
+            <button id="calculate">Calculate GPA</button>
+            <button id="calculate-another" style="display: none;">Calculate Another GPA</button>
+            <button id="toggle-dark-mode">Dark Mode</button>
+        </div>
+        <div id="result">
+            <h2>Your GPA: <span id="gpa-value">0.000</span></h2>
+            <h2>Your Percentage: <span id="percentage-value">0%</span></h2>
+        </div>
+    </div>
+    <footer class="copyright">
+        <p>&copy; 2025 Omar Lokma. All rights reserved.</p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

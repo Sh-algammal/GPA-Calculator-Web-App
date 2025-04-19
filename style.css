@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin: 20px auto;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    position: relative;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+body.dark-mode h1 {
+    color: #ffffff;
+}
+
+.course {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInSlideDown 0.5s ease forwards;
+}
+
+@keyframes fadeInSlideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode input, body.dark-mode select {
+    background-color: #333;
+    color: #ffffff;
+    border-color: #555;
+}
+
+.credits {
+    width: 80px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.remove-btn {
+    background-color: #dc3545;
+}
+
+.remove-btn:hover {
+    background-color: #b02a37;
+}
+
+#add-course {
+    background-color: #28a745;
+    margin-right: 10px;
+}
+
+#add-course:hover {
+    background-color: #218838;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#gpa-value {
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .copyright {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes popUp {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#result h2 {
+    animation: popUp 0.5s ease-in-out;
+}
+#animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: transparent;
+}
+/* when you in light mode */
+body {
+    background: linear-gradient(135deg, #a187bd, #2575fc);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+/* when you in dark mode */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
